@@ -1,4 +1,4 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
-  - initial version
+  - Split off from Alien-Build at version 0.56_01

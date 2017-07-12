@@ -4,12 +4,12 @@ use strict;
 use warnings;
 use Alien::Build::Plugin;
 
-# ABSTRACT: Plugin to prompt a user before making external download
+# ABSTRACT: Alien::Build plugin to prompt a user before making external download
 # VERSION
 
 =head1 SYNOPSIS
 
- export ALIEN_BUILD_POSTLOAD=Fetch::PromptBeforeDownload
+ export ALIEN_BUILD_PRELOAD=Fetch::PromptBeforeDownload
 
 =head1 DESCRIPTION
 
@@ -59,3 +59,13 @@ sub init
 }
 
 1;
+
+=head1 SEE ALSO
+
+=over 4
+
+=item L<Alien::Build>
+
+=back
+
+=cut

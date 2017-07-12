@@ -12,7 +12,10 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   Alien::Build::Plugin
   ExtUtils::MakeMaker
+  Test2::Mock
   Test2::V0
+  Test::Alien::Build
+  Test::Exit
   Test::More
 );
 

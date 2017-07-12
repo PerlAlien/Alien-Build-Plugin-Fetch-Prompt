@@ -1,10 +1,10 @@
 # Alien::Build::Plugin::Fetch::PromptBeforeDownload [![Build Status](https://secure.travis-ci.org/plicease/Alien-Build-Plugin-Fetch-PromptBeforeDownload.png)](http://travis-ci.org/plicease/Alien-Build-Plugin-Fetch-PromptBeforeDownload)
 
-Plugin to prompt a user before making external download
+Alien::Build plugin to prompt a user before making external download
 
 # SYNOPSIS
 
-    export ALIEN_BUILD_POSTLOAD=Fetch::PromptBeforeDownload
+    export ALIEN_BUILD_PRELOAD=Fetch::PromptBeforeDownload
 
 # DESCRIPTION
 
@@ -29,6 +29,10 @@ program like `wget` or `curl`, or not go through the normal fetch plugin.  There
 nothing stopping someone from doing something nefarious when installing a cpan module.  If you
 have strict security requirements you really should audit the alienfile and other Perl code
 that you are using.
+
+# SEE ALSO
+
+- [Alien::Build](https://metacpan.org/pod/Alien::Build)
 
 # AUTHOR
 

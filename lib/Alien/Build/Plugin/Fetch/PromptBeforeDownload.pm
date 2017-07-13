@@ -2,63 +2,27 @@ package Alien::Build::Plugin::Fetch::PromptBeforeDownload;
 
 use strict;
 use warnings;
-use Alien::Build::Plugin;
+use base qw( Alien::Build::Plugin::Fetch::Prompt );
 
-# ABSTRACT: Alien::Build plugin to prompt a user before making external download
+# ABSTRACT: Backwards compatible plugin name
 # VERSION
 
 =head1 SYNOPSIS
 
- export ALIEN_BUILD_PRELOAD=Fetch::PromptBeforeDownload
+ % perldoc Alien::Build::Plugin::Fetch::Prompt
 
 =head1 DESCRIPTION
 
-This plugin allows you to force L<Alien::Build> to prompt the user and ask for permission
-before downloading anything from the internet.  It uses the L<ExtUtils::MakeMaker> C<prompt>
-function, so that it will do the sensible thing, like not infinitely halt install on
-non-interactive installs.  The default response is C<yes>, which is usually reasonable
-(and the default if you do not use this plugin at all), but you may change this by using
-the C<ALIEN_DOWNLOAD> environment variable (see below).
-
-=head1 ENVIRONMENT
-
-=head2 ALIEN_DOWNLOAD
-
-Set this environment variable to the default response.  Should be either C<yes> or C<no>.
-
-=head1 CAVEATS
-
-This plugin depends on the L<alienfile> using the appropriate channels for downloading external
-libraries.  It is perfectly legal to write a L<alienfile> that downloads using an external
-program like C<wget> or C<curl>, or not go through the normal fetch plugin.  There is also
-nothing stopping someone from doing something nefarious when installing a cpan module.  If you
-have strict security requirements you really should audit the alienfile and other Perl code
-that you are using.
-
-=cut
-
-sub init
-{
-  my($self, $meta) = @_;
-
-  $meta->add_requires('share' => 'ExtUtils::MakeMaker' => 0 );
-
-  $meta->before_hook(
-    fetch => sub {
-      my($build, $url) = @_;
-      $url ||= $build->meta_prop->{plugin_download_negotiate_default_url};
-      my $value = ExtUtils::MakeMaker::prompt("Downloading $url, is that okay?", $ENV{ALIEN_DOWNLOAD} || 'yes');
-      unless($value =~ /^(y|yes)$/i)
-      {
-        $build->log("User refussed to download $url");
-        # Do a hard exit.  If the user insists, there isn't a way to recover really.
-        exit 2;
-      }
-    }
-  );
-}
-
-1;
+When I first wrote L<Alien::Build::Plugin::Fetch::Prompt>, I gave it
+this much too long a name.  It made my dist list on C<metacpan.org>
+all kaka.  Sort of like that one episode of The Original Series
+"For the World is Hollow and I have Touched the Sky" which is still
+the longest episode title in the history of Star Trek.  (In case
+you are wondering, and I can see you aren't, the second longest title
+goes to the Deep Space 9 episode "Looking for par'Mach in All the
+Wrong Places").  I bet by now you are realizing that you have wasted
+a minute or two reading this documentation that you won't get back
+again.
 
 =head1 SEE ALSO
 
@@ -66,6 +30,10 @@ sub init
 
 =item L<Alien::Build>
 
+=item L<Alien::Build::Plugin::Fetch::Prompt>
+
 =back
 
 =cut
+
+1;

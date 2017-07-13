@@ -1,10 +1,13 @@
-# Alien::Build::Plugin::Fetch::PromptBeforeDownload [![Build Status](https://secure.travis-ci.org/plicease/Alien-Build-Plugin-Fetch-PromptBeforeDownload.png)](http://travis-ci.org/plicease/Alien-Build-Plugin-Fetch-PromptBeforeDownload)
+# Alien::Build::Plugin::Fetch::Prompt [![Build Status](https://secure.travis-ci.org/plicease/Alien-Build-Plugin-Fetch-PromptBeforeDownload.png)](http://travis-ci.org/plicease/Alien-Build-Plugin-Fetch-PromptBeforeDownload)
 
 Alien::Build plugin to prompt a user before making external download
 
 # SYNOPSIS
 
-    export ALIEN_BUILD_PRELOAD=Fetch::PromptBeforeDownload
+In your ~/.alienbuild/rc.pl
+
+    preload 'Fetch::Prompt';
+    1;
 
 # DESCRIPTION
 

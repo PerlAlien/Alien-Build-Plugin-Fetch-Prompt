@@ -1,4 +1,4 @@
-use Test2::V0 -no_srand => 1;
+use Test2::V0 -no_srand => 1, -no_utf8 => 1;
 use Test2::Mock;
 use Test::Alien::Build;
 use Test::Exit;

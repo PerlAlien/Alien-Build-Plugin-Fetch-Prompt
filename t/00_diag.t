@@ -12,6 +12,7 @@ my $post_diag;
 $modules{$_} = $_ for qw(
   Alien::Build
   Alien::Build::Plugin
+  Capture::Tiny
   ExtUtils::MakeMaker
   Test2::Mock
   Test2::V0

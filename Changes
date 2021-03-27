@@ -2,6 +2,7 @@ Revision history for {{$dist->name}}
 
 {{$NEXT}}
   - Migrate test dep from Test::Exit to Test2::Tools::Process (gh#1)
+  - Drop support for Perls prior to 5.10
   - Moved to new GitHub org PerlAlien
 
 0.59      2017-08-08 16:34:25 -0400

@@ -2,6 +2,7 @@ package Alien::Build::Plugin::Fetch::PromptBeforeDownload;
 
 use strict;
 use warnings;
+use 5.010;
 use base qw( Alien::Build::Plugin::Fetch::Prompt );
 
 # ABSTRACT: Backwards compatible plugin name

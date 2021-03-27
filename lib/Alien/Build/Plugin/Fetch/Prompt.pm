@@ -2,7 +2,7 @@ package Alien::Build::Plugin::Fetch::Prompt;
 
 use strict;
 use warnings;
-use 5.008004;
+use 5.010;
 use Alien::Build::Plugin;
 
 # ABSTRACT: Alien::Build plugin to prompt a user before making external download

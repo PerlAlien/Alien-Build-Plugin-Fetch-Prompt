@@ -15,9 +15,9 @@ $modules{$_} = $_ for qw(
   Capture::Tiny
   ExtUtils::MakeMaker
   Test2::Mock
+  Test2::Tools::Process
   Test2::V0
   Test::Alien::Build
-  Test::Exit
 );
 
 

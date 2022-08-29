@@ -1,6 +1,8 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+
+0.61      2022-08-29 13:34:30 -0600
   - Add compatability with ALIEN_DOWNLOAD_RULE override (gh#4)
 
 0.60      2021-03-27 11:21:05 -0600

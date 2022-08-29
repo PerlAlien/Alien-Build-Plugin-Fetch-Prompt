@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}
 
 {{$NEXT}}
+  - Add compatability with ALIEN_DOWNLOAD_RULE override (gh#4)
 
 0.60      2021-03-27 11:21:05 -0600
   - Migrate test dep from Test::Exit to Test2::Tools::Process (gh#1)

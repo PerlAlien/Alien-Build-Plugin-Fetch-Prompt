@@ -50,7 +50,7 @@ sub init
   $meta->before_hook(
     fetch => sub {
       my($build, $url) = @_;
-      $url ||= $build->meta_prop->{plugin_download_negotiate_default_url};
+      $url ||= $build->meta_prop->{start_url} || $build->meta_prop->{plugin_download_negotiate_default_url};
       my $value = ExtUtils::MakeMaker::prompt("Downloading $url, is that okay?", $ENV{ALIEN_DOWNLOAD} || 'yes');
       unless($value =~ /^(y|yes)$/i)
       {

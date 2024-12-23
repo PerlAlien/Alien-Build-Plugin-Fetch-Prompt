@@ -1,4 +1,4 @@
-# Alien::Build::Plugin::Fetch::Prompt ![linux](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/linux/badge.svg) ![macos](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/macos/badge.svg) ![windows](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/windows/badge.svg) ![msys2-mingw](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/msys2-mingw/badge.svg)
+# Alien::Build::Plugin::Fetch::Prompt ![linux](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/linux/badge.svg) ![macos](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/macos/badge.svg) ![windows](https://github.com/plicease/Alien-Build-Plugin-Fetch-Prompt/workflows/windows/badge.svg)
 
 Alien::Build plugin to prompt a user before making external download
 
